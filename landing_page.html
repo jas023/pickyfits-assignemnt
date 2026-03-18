@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PickyFits | Wear Your Attitude</title>
+<!-- Google Fonts for Streetwear Aesthetics -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'pf-black': '#000000',
+            'pf-white': '#FFFFFF',
+            'pf-grey': '#1A1A1A',
+          },
+          fontFamily: {
+            heading: ['Anton', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="animations">
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .hover-zoom:hover img {
+      transform: scale(1.05);
+    }
+    .transition-custom {
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+  </style>
+<style data-purpose="scrollbar">
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+    }
+  </style>
+</head>
+<body class="bg-pf-black text-pf-white font-body selection:bg-pf-white selection:text-pf-black overflow-x-hidden">
+<!-- BEGIN: Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-pf-black/80 backdrop-blur-md border-b border-pf-white/10" data-purpose="main-nav">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="text-2xl font-heading tracking-tighter italic">PICKYFITS</div>
+<div class="flex items-center space-x-6">
+<button class="text-sm font-bold uppercase tracking-widest border-b border-pf-white">Shop</button>
+<div class="relative">
+<svg fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+</svg>
+</div>
+</div>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Hero Section -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden" data-purpose="hero">
+<!-- Overlay for dark moody vibe -->
+<div class="absolute inset-0 bg-gradient-to-t from-pf-black via-pf-black/40 to-transparent z-10"></div>
+<!-- Hero Image (Placeholder for moody streetwear photography) -->
+<img alt="Hero Streetwear Model" class="absolute inset-0 w-full h-full object-cover grayscale brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHRtOxRCrsR8sIpXzcxZCEHMhe-R5Kds3q7T5P3h0Rj6x5VcYDkOzvHdckwmECj-uBetKxkjlgC53K2JCAahkAQ0dRSoTCi5OPMR2lvc_Fz_EN2sCrrtudrCLWo5F2a079rZ2DLzDdcsbyBtH2uasOwj6S8YyhqJxE9D_MrmRPCmTaztRP8R4aDNTYMrFS7-9-JcYCJBivZnCb0-DOEW7avuhHhNQ3TK_xP1E0Pli6gmqvtExVkDsQlcpjx5qPxP0YZUTE9S95pOA"/>
+<div class="relative z-20 text-center px-6 animate-fade-in">
+<h1 class="text-6xl md:text-9xl font-heading leading-none tracking-tight mb-4 uppercase">
+        Wear Your <br/> <span class="text-transparent border-pf-white" style="-webkit-text-stroke: 1px white;">Attitude</span>
+</h1>
+<p class="text-sm md:text-lg uppercase tracking-[0.3em] font-light mb-8 max-w-md mx-auto opacity-80">
+        Engineered for the bold. Designed for the streets of India.
+      </p>
+<a class="inline-block px-10 py-4 bg-pf-white text-pf-black font-bold uppercase tracking-widest text-sm hover:bg-transparent hover:text-pf-white border border-pf-white transition-custom" href="#products">
+        Shop Now
+      </a>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce opacity-50">
+<svg fill="white" height="24" viewbox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" fill-rule="evenodd" transform="rotate(90 8 8)"></path>
+</svg>
+</div>
+</header>
+<!-- END: Hero Section -->
+<!-- BEGIN: Trust Strip -->
+<section class="bg-pf-white text-pf-black py-6 overflow-hidden" data-purpose="trust-strip">
+<div class="flex whitespace-nowrap animate-marquee">
+<!-- Repeated content for marquee effect -->
+<div class="flex space-x-12 items-center px-4 font-bold uppercase tracking-tighter text-xs md:text-sm">
+<span>Free Shipping Across India</span>
+<span class="opacity-30">•</span>
+<span>Premium 300GSM Fabric</span>
+<span class="opacity-30">•</span>
+<span>Quality Checked</span>
+<span class="opacity-30">•</span>
+<span>PickyFits Original</span>
+<span class="opacity-30">•</span>
+<span>Free Shipping Across India</span>
+<span class="opacity-30">•</span>
+<span>Premium 300GSM Fabric</span>
+<span class="opacity-30">•</span>
+<span>Quality Checked</span>
+<span class="opacity-30">•</span>
+<span>PickyFits Original</span>
+</div>
+</div>
+</section>
+<style data-purpose="marquee-logic">
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 20s linear infinite;
+    }
+  </style>
+<!-- END: Trust Strip -->
+<!-- BEGIN: Featured Products -->
+<section class="py-20 px-6 max-w-7xl mx-auto" data-purpose="product-gallery" id="products">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl md:text-6xl font-heading uppercase">Fresh Drops</h2>
+<p class="text-pf-white/50 uppercase tracking-widest text-xs mt-2">Limited Edition Releases</p>
+</div>
+<a class="hidden md:block text-xs font-bold uppercase border-b border-pf-white pb-1 mt-4 md:mt-0" href="#">View All Collections</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer" data-purpose="product-card">
+<div class="relative aspect-[3/4] overflow-hidden bg-pf-grey transition-custom hover-zoom">
+<img alt="Money Up In Flames Hoodie" class="w-full h-full object-cover transition-transform duration-700" src="images/black-hoodie.jpeg"/>
+<div class="absolute inset-0 bg-pf-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-6 py-2 bg-pf-white text-pf-black font-bold uppercase text-xs tracking-tighter">Quick Add</span>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h3 class="font-bold uppercase tracking-tight text-sm">Money Up In Flames Hoodie</h3>
+<p class="text-pf-white/40 text-xs">Black</p>
+</div>
+<span class="font-bold">₹1,499.00</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer" data-purpose="product-card">
+<div class="relative aspect-[3/4] overflow-hidden bg-pf-grey transition-custom hover-zoom">
+<img alt="Sin City Praying Hands Hoodie" class="w-full h-full object-cover transition-transform duration-700" src="images/white-hoodie.jpeg"/>
+<div class="absolute inset-0 bg-pf-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-6 py-2 bg-pf-white text-pf-black font-bold uppercase text-xs tracking-tighter">Quick Add</span>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h3 class="font-bold uppercase tracking-tight text-sm">Sin City Praying Hands Hoodie</h3>
+<p class="text-pf-white/40 text-xs">White</p>
+</div>
+<span class="font-bold">₹1,499.00</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer" data-purpose="product-card">
+<div class="relative aspect-[3/4] overflow-hidden bg-pf-grey transition-custom hover-zoom">
+<img alt="Hip Hop Boombax T-Shirt" class="w-full h-full object-cover transition-transform duration-700" src="images/black-tshirt.jpeg"/>
+<div class="absolute inset-0 bg-pf-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-6 py-2 bg-pf-white text-pf-black font-bold uppercase text-xs tracking-tighter">Quick Add</span>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h3 class="font-bold uppercase tracking-tight text-sm">Hip Hop Boombax T-Shirt</h3>
+<p class="text-pf-white/40 text-xs">Black</p>
+</div>
+<span class="font-bold">₹799.00</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer" data-purpose="product-card">
+<div class="relative aspect-[3/4] overflow-hidden bg-pf-grey transition-custom hover-zoom">
+<img alt="Born to Roam Adventure T-Shirt" class="w-full h-full object-cover transition-transform duration-700" src="images/white-tshirt.jpeg"/>
+<div class="absolute inset-0 bg-pf-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-6 py-2 bg-pf-white text-pf-black font-bold uppercase text-xs tracking-tighter">Quick Add</span>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-start">
+<div>
+<h3 class="font-bold uppercase tracking-tight text-sm">Born to Roam Adventure T-Shirt</h3>
+<p class="text-pf-white/40 text-xs">White</p>
+</div>
+<span class="font-bold">₹799.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Featured Products -->
+<!-- BEGIN: Brand Statement -->
+<section class="py-32 bg-pf-white text-pf-black px-6 text-center" data-purpose="brand-statement">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl md:text-7xl font-heading uppercase leading-none mb-8">
+        Not made for everyone. <br/> Just the bold.
+      </h2>
+<p class="text-sm md:text-base tracking-[0.2em] font-medium uppercase opacity-70">
+        PickyFits is a rebellion against mediocre fast fashion. We craft aesthetics for those who speak without words.
+      </p>
+</div>
+</section>
+<!-- END: Brand Statement -->
+<!-- BEGIN: Instagram / Social Feed -->
+<!-- END: Instagram / Social Feed -->
+<!-- BEGIN: Footer -->
+<footer class="bg-pf-black border-t border-pf-white/10 pt-20 pb-10 px-6" data-purpose="main-footer">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2">
+<div class="text-4xl font-heading tracking-tighter italic mb-6">PICKYFITS</div>
+<p class="text-pf-white/50 text-sm max-w-sm leading-relaxed uppercase tracking-wider">
+          The ultimate destination for premium Indian streetwear. Modern silhouettes, superior quality, and pure attitude.
+        </p>
+</div>
+<div>
+<h4 class="font-bold uppercase text-xs mb-6 tracking-widest">Navigation</h4>
+<ul class="space-y-4 text-sm uppercase text-pf-white/60">
+<li><a class="hover:text-pf-white transition-colors" href="#">Shop All</a></li>
+<li><a class="hover:text-pf-white transition-colors" href="#">New Drops</a></li>
+<li><a class="hover:text-pf-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-pf-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold uppercase text-xs mb-6 tracking-widest">Connect</h4>
+<ul class="space-y-4 text-sm uppercase text-pf-white/60">
+<li><a class="hover:text-pf-white transition-colors" href="https://www.instagram.com/pickyfits_official?igsh=NndpbDFodzN4eHlu">Instagram</a></li>
+<li class="hover:text-pf-white transition-colors"><a href="mailto:support@pickyfits.com">support@pickyfits.com</a></li>
+<li class="hover:text-pf-white transition-colors">+91 79729-68165 </li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-pf-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] text-pf-white/30">
+<p>© 2026 PickyFits Clothing. All Rights Reserved.</p>
+<p class="mt-4 md:mt-0">Made in India for the world.</p>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>
